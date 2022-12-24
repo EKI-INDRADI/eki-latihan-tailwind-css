@@ -1,0 +1,12 @@
+@tailwind base;
+/* ==reset */
+
+@tailwind components;
+/* ==grid system, komponent , dll */
+
+@tailwind utilities;
+/* ===class utilitis yang akan digunakan */
+
+
+
+/* di root atau di /src/input.css */

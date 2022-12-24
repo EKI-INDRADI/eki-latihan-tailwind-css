@@ -1,0 +1,29 @@
+{
+  "name": "eki-latihan-tailwind-css",
+  "version": "1.0.0",
+  "description": "Reference : https://www.youtube.com/watch?v=z3slaXqmkT0&list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h",
+  "main": "index.js",
+  "scripts": {
+    "start:minify" : "npx tailwindcss -o ./public/css/final.css --minify",
+    "start:dev" : "npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch",
+    "start:dev-default" : "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start:dev-root" : "npx tailwindcss -i ./input.css -o ./output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EKI-INDRADI/eki-latihan-tailwind-css.git"
+  },
+  "keywords": [
+    "EKI-INDRADI"
+  ],
+  "author": "EKI INDRADI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EKI-INDRADI/eki-latihan-tailwind-css/issues"
+  },
+  "homepage": "https://github.com/EKI-INDRADI/eki-latihan-tailwind-css#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
