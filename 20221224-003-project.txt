@@ -1,0 +1,10 @@
+
+
+vscode  extentions
+
+tailwind css intellisense
+live preview
+postCSS Language Support
+
+
+install nodejs

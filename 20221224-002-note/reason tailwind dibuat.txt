@@ -1,0 +1,140 @@
+apa yang biasa di lakukan oleh praktek2 terbaiknya frontend
+
+
+https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
+
+
+"separation of concerns"
+- structure  / html
+- presentiation / css
+- behaviour / js
+
+
+fase 1 semantic css 
+
+//----------------------- tidak semantik pada vanila css
+```
+<p class="text-center"> 
+Hello there! 
+</p> 
+```
+
+```
+.text-center { 
+text-align: center; 
+} 
+```
+//----------------------- tidak semantik pada vanila css
+
+
+
+//----------------------- semantik pada vanila css
+```
+<p class="greeting"> 
+Hello there! 
+</p> 
+```
+
+```
+.greeting { 
+text-align: center; 
+} 
+```
+
+"separation of concerns" dapet
+//----------------------- semantik pada vanila css
+
+
+
+
+
+
+
+css sangat bergantung pada struktur markup (HTML) harus menganut "separation of concerns" , tetapi css tidak bisa dipisah selalu tergantung dengan html
+maka tailwind dibuat  untuk benar2 menerapkan konsep  "separation of concerns"
+
+
+
+fase 2 memisahkan styles dari structure
+BEM = Blocks , Elements & Modifiers
+
+block = elemen2 yang berdiri sendiri dan punya makna sendiri  cth : header, container , menu, checkbox, input
+element = bagian dari block yang ga punya arti tersendiri cth menu item , list item , checkbox caption , header title
+modifier = memmodifikasi element cth : disable , hightlighted, checked, fixed, size big ,color yellow
+https://getbem.com/introduction/
+
+
+https://www.youtube.com/watch?v=ELCr9MyRTH8&list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h&index=2 10:00 ~ 11:19
+
+
+tetapi di hadapakan oleh sebuah dilema , 
+jika sudah membuat class css (custom) sudah jadi semantik contoh (author-bio) 
+lalu ada fitur yang sama dengan (author_bio)  contoh (article-preview) seluruh css akan pakai author-bio (author-bio sudah memiliki hirarki css) tinggal di edit tetapi hasilnya TIDAK SEMANTIK,
+jika ingin SEMANTIK harus buat css baru tetapi terjadi DUPLIKASI
+
+
+
+solution : create a content-agnostic componentn / buatlah sebuah komponent yang namanya tidak tergantung (contoh .media-card) tetapi hasilnya tidak  "separation of concerns" tidak bisa focus ke salah satu
+
+
+Seperation of Concerns = css yang bergantung pada HTML , kelebihannya bisa ubah2 isi htmlnya , cssnya tidak bs digunakan kembali dan harus bs buat class baru
+Mixing of Concerns = HTML yang bergantung pada CSS , kelebihannya html not restyleable , css reusable  contoh bootstrap
+
+
+
+
+tailwind choose reusability
+
+
+fase 3 focus untuk membuat css components yang tidak bergantung pada konten / content-agnostic css components
+
+.card
+.btn, .btn-primary, .btn-secondary
+.badge 
+.card-list, .card-list-item
+.img-round
+.modal-form 
+.modal-form-section
+
+masalah baru 
+
+semakin banyak yang di lakukan sebuah komponent atau semakin speisific komponenent ternyata makin susah digunakan kembali , solusinya menggunakan modifier css
+https://www.youtube.com/watch?v=ELCr9MyRTH8&list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h&index=2 20:21
+
+fase 4 modifier2 yang sama di tarik jadi sebuah utility class
+
+untuk handle semakin besar website semakin cssnya beragam & spesisifc , dan pasti akan semakin susah memodifikasi komponennya
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+menurut dev tailwind "kita sebaiknya tetap membuat komponen tatapi buatlah menggunakan utilitynya dulu" itulah alasan tailwind berfocus pada (utility-first)
+
+sebelumnya 
+
+<button class="py-2 px-4 bg-blue-500 text-white font-semibold
+rounded-1g shadow-md hover:bg-blue-700 focus:outline-none
+focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+Simpan 
+</button>
+
+
+sesudahnya
+
+@layer components { 
+.tombol-ungu { 
+@apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-l1g shadow-md 
+hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 
+focus:ring-opacity-75; 
+} 
+}
+
+
+
+<button class="tombol-ungu">Simpan</button> |
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
