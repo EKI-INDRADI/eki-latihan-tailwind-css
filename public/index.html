@@ -51,11 +51,18 @@
     <!-- 20221225  Spacing & Sizing, Typography, Colors -->
 
 
-    <h1 class="text-8xl font-bold text-center my-10 text-blue-600">EKI TESTING 20221225</h1>
+    <h1 class="text-8xl font-bold text-center my-10 ">Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1> <!-- supaya bisa pakai warna gradien hrs di set ke transparant dulu text-transparent -->
 
     <br>
 
-    <section class="mb-10  bg-indigo-200">
+    <!-- <section class="mb-10  bg-gradient-to-r from-indigo-200 to-yellow-200"> -->
+        
+        <!-- bg-gradient-to-r = right
+        bg-gradient-to-tr = top right 
+        bg-gradient-to-br = bottom right 
+    via-  = gratiden di tengah
+    -->
+    <section class="mb-10  bg-gradient-to-br from-indigo-200 via-red-200 to-yellow-200">
         <h2  class="text-3xl text-center">Spacing</h2>
         <!-- jarak di dalam element = margin
         jarak di luar element = padding -->
@@ -75,9 +82,9 @@
 
         <!-- <div class="m-auto">Margin</div> margin auto -->
 
-        <div class="m-13 bg-red-200">Margin</div>
+        <div class="m-13 ">Margin</div>
         <!-- <div class="pt-8">Padding</div> pading atas aja -->
-        <div class="py-8 bg-red-200">Padding</div> <!-- pading atas bawah -->
+        <div class="py-8 ">Padding</div> <!-- pading atas bawah -->
     </section>
 
     <section class="mb-10 bg-green-200">
