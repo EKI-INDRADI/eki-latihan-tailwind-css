@@ -517,8 +517,42 @@ video {
 
 /* ==grid system, komponent , dll */
 
+.m-4 {
+  margin: 1rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-13 {
+  margin: 3.25rem;
+}
+
 .m-3 {
   margin: 0.75rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.-ml-8 {
+  margin-left: -2rem;
 }
 
 .inline-block {
@@ -527,6 +561,10 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-green-500 {
@@ -541,6 +579,15 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-3xl {
@@ -569,6 +616,14 @@ video {
 }
 
 /* ===class utilitis yang akan digunakan */
+
+/* //----------custom vanila css 20221225 */
+
+* {
+  border: 1px solid red;
+}
+
+/* //----------custom vanila css 20221225  */
 
 /* di root atau di /src/input.css */
 

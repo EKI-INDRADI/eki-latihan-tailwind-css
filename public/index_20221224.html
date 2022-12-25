@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Tailwind</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script>  -->
+    <!-- 
+        pake cdn bukan cara terbaik untuk production  (disarankan menggunakan cli)  & 
+        tidak punya akses class2 auto complite ke cdn ini
+    400 -500 kb
+
+    disarankan menggunakan cli
+    -->
+
+    <script>
+
+        // bisa langsung buat konfigurasi
+
+        // tailwind.config = {
+        //   theme: {
+        //     extend: {
+        //       colors: {
+        //         clifford: '#da373d',
+        //       }
+        //     }
+        //   }
+        // }
+    </script>
+
+
+    <!-- <link rel="stylesheet" href="../dist/output.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- jika pakai cdn size besar     400 -500 kb -->
+    <!-- jika menggunakan cli file css akan digunakan sesuai kebutuhan (hanya 10kb) 
+        dan bs di minify   ,   npx tailwindcss -o ./public/css/final.css --minify   setelah di minify bisa 5kb-->
+        <!-- <link rel="stylesheet" href="css/final.css" /> -->
+</head>
+
+<body>
+
+    <!-- // semuanya di reset menggunakan reset milik tailwind ketika implementasi tailwind pada html -->
+    <h1 class="text-3xl font-bold text-blue-600">Hello WPU</h1>
+    <a href="#" class="bg-green-500 p-3 text-white inline-block m-3 rounded shadow hover:bg-green-700"> ini tombol</a>
+    <p class="m-3 bg-yellow-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita maxime magnam
+        temporibus voluptatum labore quos, eligendi soluta sed pariatur id error ea adipisci. Suscipit nisi dolorum non
+        vel eligendi!</p>
+
+    <!-- jika pake cli css akan auto complite -->
+    <!-- tailwind akan generate otomatis css nya di output / style.css secara otomatis dari data yg di input-->
+    <!-- mode developer ada case dmn ketika sudah pakai css dan rubah cssnya akan tetap ada di style / output css nya tapi kalo untuk di run ulang /restart  / di akhir akan otomatis hilang atau dengan cara ctrl+S pada tailwind.config.js-->
+</body>
+
+</html>
