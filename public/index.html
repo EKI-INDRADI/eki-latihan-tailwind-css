@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+    <!-- simpan font sebelum css tailwind lalu masukin ke tailwind.config.js -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet">
+  
     <title>Coba Tailwind</title>
     <!-- custom tailwind 20221225 not work solusinya bikin di src\input.css-->
     <!-- <style type="text/tailwindcss">
@@ -46,12 +51,12 @@
     <!-- 20221225  Spacing & Sizing, Typography, Colors -->
 
 
-    <h1 class="text-3xl font-bold text-blue-600">EKI TESTING 20221225</h1>
+    <h1 class="text-8xl font-bold text-center my-10 text-blue-600">EKI TESTING 20221225</h1>
 
     <br>
 
-    <section class="mb-10">
-        <h2>Spacing</h2>
+    <section class="mb-10  bg-indigo-200">
+        <h2  class="text-3xl text-center">Spacing</h2>
         <!-- jarak di dalam element = margin
         jarak di luar element = padding -->
 
@@ -70,22 +75,59 @@
 
         <!-- <div class="m-auto">Margin</div> margin auto -->
 
-        <div class="m-13">Margin</div>
+        <div class="m-13 bg-red-200">Margin</div>
         <!-- <div class="pt-8">Padding</div> pading atas aja -->
-        <div class="py-8">Padding</div> <!-- pading atas bawah -->
+        <div class="py-8 bg-red-200">Padding</div> <!-- pading atas bawah -->
     </section>
 
-    <section class="mb-10">
-        <h2>Sizing</h2>
+    <section class="mb-10 bg-green-200">
+        <h2 class="text-3xl text-center">Sizing</h2>
         <!-- <div class="w-16">Kotak 1</div> -->
-       <div class="w-32 h-32">Kotak 1</div>
-       <!-- <div class="max-w-xs min-h-screen">Kotak 2</div> -->
+        <div class="w-32 h-32 bg-wpu">Kotak 1</div> <!-- custom warna di tailwind.config.js-->
+        <!-- <div class="w-32 h-32 bg-kopi">Kotak 1</div> custom warna di tailwind.config.js -->
+        <!-- <div class="max-w-xs min-h-screen">Kotak 2</div> -->
 
-       <!-- min-h-screen == menyesuaikan tinggi layar -->
+        <!-- min-h-screen == menyesuaikan tinggi layar -->
         <!-- <div class="w-1/2">Kotak 1</div> width support pecahan -->
         <!-- https://tailwindcss.com/docs/width -->
-  
+
     </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto"> <!-- supaya bs scroll-->  <!--  mx-auto == biar ke tengah -->
+       <!-- suapaya bs custom font hrs download font dulu https://fonts.google.com/ -->
+       <!-- font Inter (Rasmus Andersson) biar mirip tailwind  https://fonts.google.com/specimen/Inter?query=inter-->
+
+
+        <h2 class="mb-2 text-4xl font-bold" >Learn Typography TailwindCSS</h2>
+
+        <di class="mb-4 text-lg text-gray-500" >
+            by <a href="#" class="text-gray-700 font-semibold">Eki Indradi</a>, 20221225
+        </div>
+
+        <!-- lorem50 -->
+
+        <p class="mb-4">Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold text-blue-600">adipisicing</a> elit. Ipsam sapiente suscipit totam nihil? Ipsum ratione
+            odit sunt esse natus animi similique hic consequatur laboriosam, expedita recusandae, minus alias labore,
+            officiis velit facere! Fuga cupiditate, dolorum illo magnam odit sint non autem maxime molestiae possimus,
+            architecto, aliquam optio placeat eaque pariatur.</p>
+
+        <!-- lorem20 -->
+
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, maxime veritatis recusandae quas vitae sed
+            libero! Placeat quaerat nostrum quidem!"</blockquote>
+
+        <!-- lorem30 -->
+
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sapiente architecto reprehenderit nesciunt
+            nihil. Molestiae esse deleniti ipsum repellendus nam alias architecto repellat nulla dolorum. Et vitae hic
+            eum voluptates.</p>
+
+<!-- 
+            https://tailwindcss.com/docs/text-color
+            https://tailwindcss.com/docs/background-color
+            https://tailwindcss.com/docs/customizing-colors -->
+    </section>
+
 
 
 
